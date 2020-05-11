@@ -22,9 +22,9 @@ class ApplicationsMongoDbPersistence
     if (search != null) {
       var searchRegex = RegExp(search, caseSensitive: false);
       var searchCriteria = [];
-      searchCriteria.add({ 'id': { r'$regex': searchRegex } });
-      searchCriteria.add({ 'product': { r'$regex': searchRegex } });
-      searchCriteria.add({ 'copyrights': { r'$regex': searchRegex } });
+      searchCriteria.add({ 'id': { r'$regex': searchRegex.pattern } });
+      searchCriteria.add({ 'product': { r'$regex': searchRegex.pattern } });
+      searchCriteria.add({ 'copyrights': { r'$regex': searchRegex.pattern } });
       criteria.add({ r'$or': searchCriteria });
     }    
 

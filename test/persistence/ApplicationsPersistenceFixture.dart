@@ -102,10 +102,9 @@ void testCrudOperations() async {
     expect(page.data.length, 2);
 
     // Filter by search
-    // NEED TO FIX
-    // page = await _persistence.getPageByFilter(
-    //     null, FilterParams.fromValue({'search': 'Product 1'}), PagingParams());
-    // expect(page.data.length, 2);
+    page = await _persistence.getPageByFilter(
+        null, FilterParams.fromValue({'search': '1'}), PagingParams());
+    expect(page.data.length, 2);
   }    
 
 }
