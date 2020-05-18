@@ -156,11 +156,12 @@ If you use dart, then get references to the required libraries:
 - Pip.Services3.Rpc: 
 https://github.com/pip-services3-dart/pip-services3-rpc-dart
 
-<!-- Todo: rename pip-templates-microservice-dart -->
-Add **pip-services3-commons-dart** and **pip-templates-microservice-dart** packages
+Add **pip-services3-commons-dart**, **pip-services3-rpc-dart** and **pip-services_applications** packages
 ```dart
 import 'package:pip_services3_commons/pip_services3_commons.dart';
-import 'package:pip_templates_microservice/pip_templates_microservice.dart';
+import 'package:pip_services3_rpc/pip_services3_rpc.dart';
+
+import 'package:pip_services_applications/pip_services_applications.dart';
 
 ```
 
