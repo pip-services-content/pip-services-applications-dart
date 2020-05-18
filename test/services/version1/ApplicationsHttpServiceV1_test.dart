@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:test/test.dart';
 import 'package:http/http.dart' as http;
 import 'package:pip_services3_commons/pip_services3_commons.dart';
-import 'package:pip_services_applications_dart/pip_services_applications_dart.dart';
+import 'package:pip_services_applications/pip_services_applications.dart';
 
 final APPLICATION1 = ApplicationV1(
     id: '1',
@@ -10,16 +10,14 @@ final APPLICATION1 = ApplicationV1(
     product: 'Product 1',
     copyrights: 'PipDevs 2018',
     min_ver: 0,
-    max_ver: 9999
-);
+    max_ver: 9999);
 final APPLICATION2 = ApplicationV1(
     id: '2',
     name: MultiString({'en': 'App1'}),
     product: 'Product 1',
     copyrights: 'PipDevs 2018',
     min_ver: 0,
-    max_ver: 9999
-);
+    max_ver: 9999);
 
 var httpConfig = ConfigParams.fromTuples([
   'connection.protocol',
@@ -52,11 +50,14 @@ void main() {
       service.configure(httpConfig);
 
       var references = References.fromTuples([
-        Descriptor('pip-services-applications', 'persistence', 'memory', 'default', '1.0'),
+        Descriptor('pip-services-applications', 'persistence', 'memory',
+            'default', '1.0'),
         persistence,
-        Descriptor('pip-services-applications', 'controller', 'default', 'default', '1.0'),
+        Descriptor('pip-services-applications', 'controller', 'default',
+            'default', '1.0'),
         controller,
-        Descriptor('pip-services-applications', 'service', 'http', 'default', '1.0'),
+        Descriptor(
+            'pip-services-applications', 'service', 'http', 'default', '1.0'),
         service
       ]);
 
@@ -102,7 +103,8 @@ void main() {
           headers: {'Content-Type': 'application/json'},
           body: json
               .encode({'filter': FilterParams(), 'paging': PagingParams()}));
-      var page = DataPage<ApplicationV1>.fromJson(json.decode(resp.body), (item) {
+      var page =
+          DataPage<ApplicationV1>.fromJson(json.decode(resp.body), (item) {
         var application = ApplicationV1();
         application.fromJson(item);
         return application;

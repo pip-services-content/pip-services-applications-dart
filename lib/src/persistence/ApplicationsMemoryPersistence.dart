@@ -18,7 +18,7 @@ class ApplicationsMemoryPersistence
     if (value == null || search == null) {
       return false;
     }
-    return value.toLowerCase().contains(search);    
+    return value.toLowerCase().contains(search);
   }
 
   bool matchSearch(ApplicationV1 item, String search) {
@@ -32,7 +32,7 @@ class ApplicationsMemoryPersistence
     if (matchString(item.copyrights, search)) {
       return true;
     }
-    return false;    
+    return false;
   }
 
   Function composeFilter(FilterParams filter) {
@@ -56,7 +56,7 @@ class ApplicationsMemoryPersistence
       if (group != null && item.group != group) {
         return false;
       }
-      return true; 
+      return true;
     };
   }
 

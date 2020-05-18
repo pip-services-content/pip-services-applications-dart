@@ -1,4 +1,4 @@
-import 'package:pip_services_applications_dart/pip_services_applications_dart.dart';
+import 'package:pip_services_applications/pip_services_applications.dart';
 
 void main(List<String> argument) {
   try {

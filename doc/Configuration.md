@@ -1,4 +1,4 @@
-# Configuration Guide <br/> Applications Microservice
+# Configuration Guide <br> Applications Microservice
 
 Configuration structure used by this module follows the 
 [standard configuration] https://github.com/pip-services/pip-services/blob/master/usage/Configuration.md 

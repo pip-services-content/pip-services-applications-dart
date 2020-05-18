@@ -8,14 +8,14 @@ import '../logic/ApplicationsController.dart';
 import '../services/version1/ApplicationsHttpServiceV1.dart';
 
 class ApplicationsServiceFactory extends Factory {
-  static final MemoryPersistenceDescriptor =
-      Descriptor('pip-services-applications', 'persistence', 'memory', '*', '1.0');
-  static final FilePersistenceDescriptor =
-      Descriptor('pip-services-applications', 'persistence', 'file', '*', '1.0');
-  static final MongoDbPersistenceDescriptor =
-      Descriptor('pip-services-applications', 'persistence', 'mongodb', '*', '1.0');
-  static final ControllerDescriptor =
-      Descriptor('pip-services-applications', 'controller', 'default', '*', '1.0');
+  static final MemoryPersistenceDescriptor = Descriptor(
+      'pip-services-applications', 'persistence', 'memory', '*', '1.0');
+  static final FilePersistenceDescriptor = Descriptor(
+      'pip-services-applications', 'persistence', 'file', '*', '1.0');
+  static final MongoDbPersistenceDescriptor = Descriptor(
+      'pip-services-applications', 'persistence', 'mongodb', '*', '1.0');
+  static final ControllerDescriptor = Descriptor(
+      'pip-services-applications', 'controller', 'default', '*', '1.0');
   static final HttpServiceDescriptor =
       Descriptor('pip-services-applications', 'service', 'http', '*', '1.0');
 
@@ -26,8 +26,8 @@ class ApplicationsServiceFactory extends Factory {
         ApplicationsFilePersistence);
     registerAsType(ApplicationsServiceFactory.MongoDbPersistenceDescriptor,
         ApplicationsMongoDbPersistence);
-    registerAsType(
-        ApplicationsServiceFactory.ControllerDescriptor, ApplicationsController);
+    registerAsType(ApplicationsServiceFactory.ControllerDescriptor,
+        ApplicationsController);
     registerAsType(ApplicationsServiceFactory.HttpServiceDescriptor,
         ApplicationsHttpServiceV1);
   }

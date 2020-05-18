@@ -12,8 +12,7 @@ class ApplicationV1 implements IStringIdentifiable {
   String icon;
   int min_ver;
   int max_ver;
-  var access_rights; // String[]
-
+  List<String> access_rights;
 
   ApplicationV1(
       {String id,
@@ -26,7 +25,7 @@ class ApplicationV1 implements IStringIdentifiable {
       String icon,
       int min_ver,
       int max_ver,
-      var access_rights})
+      List<String> access_rights})
       : id = id,
         name = name,
         description = description,
@@ -67,5 +66,5 @@ class ApplicationV1 implements IStringIdentifiable {
       'max_ver': max_ver,
       'access_rights': access_rights
     };
-  }    
+  }
 }

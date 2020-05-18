@@ -1,4 +1,4 @@
-# Deployment Guide <br/> Applications Microservice
+# Deployment Guide <br> Applications Microservice
 
 * [Standalone Process](#process)
 

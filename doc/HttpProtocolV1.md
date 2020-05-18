@@ -1,4 +1,4 @@
-# HTTP Protocol (version 1) <br/> Applications Microservice
+# HTTP Protocol (version 1) <br> Applications Microservice
 
 Applications microservice implements a HTTP compatible API, that can be accessed on configured port.
 All input and output data is serialized in JSON format. Errors are returned in [standard format]().

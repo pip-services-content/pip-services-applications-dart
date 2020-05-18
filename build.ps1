@@ -4,9 +4,9 @@ Set-StrictMode -Version latest
 $ErrorActionPreference = "Stop"
 
 # Get component data and set necessary variables
-$component = Get-Content -Path "component.json" | ConvertFrom-Json
-$buildImage="$($component.registry)/$($component.name):$($component.version)-$($component.build)-build"
-$container=$component.name
+# $component = Get-Content -Path "component.json" | ConvertFrom-Json
+# $buildImage="$($component.registry)/$($component.name):$($component.version)-$($component.build)-build"
+# $container=$component.name
 
 # Remove build files
 # if (Test-Path "obj") {

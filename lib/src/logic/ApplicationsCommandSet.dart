@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:pip_services3_commons/pip_services3_commons.dart';
 
 import '../../src/data/version1/ApplicationV1Schema.dart';
@@ -33,8 +31,10 @@ class ApplicationsCommandSet extends CommandSet {
   }
 
   ICommand _makeGetApplicationByIdCommand() {
-    return Command('get_application_by_id',
-        ObjectSchema(true).withRequiredProperty('application_id', TypeCode.String),
+    return Command(
+        'get_application_by_id',
+        ObjectSchema(true)
+            .withRequiredProperty('application_id', TypeCode.String),
         (String correlationId, Parameters args) {
       var applicationId = args.getAsString('application_id');
       return _controller.getApplicationById(correlationId, applicationId);
@@ -42,8 +42,10 @@ class ApplicationsCommandSet extends CommandSet {
   }
 
   ICommand _makeCreateApplicationCommand() {
-    return Command('create_application',
-        ObjectSchema(true).withRequiredProperty('application', ApplicationV1Schema()),
+    return Command(
+        'create_application',
+        ObjectSchema(true)
+            .withRequiredProperty('application', ApplicationV1Schema()),
         (String correlationId, Parameters args) {
       var application = ApplicationV1();
       application.fromJson(args.get('application'));
@@ -52,8 +54,10 @@ class ApplicationsCommandSet extends CommandSet {
   }
 
   ICommand _makeUpdateApplicationCommand() {
-    return Command('update_application',
-        ObjectSchema(true).withRequiredProperty('application', ApplicationV1Schema()),
+    return Command(
+        'update_application',
+        ObjectSchema(true)
+            .withRequiredProperty('application', ApplicationV1Schema()),
         (String correlationId, Parameters args) {
       var application = ApplicationV1();
       application.fromJson(args.get('application'));
@@ -62,8 +66,10 @@ class ApplicationsCommandSet extends CommandSet {
   }
 
   ICommand _makeDeleteApplicationByIdCommand() {
-    return Command('delete_application_by_id',
-        ObjectSchema(true).withRequiredProperty('application_id', TypeCode.String),
+    return Command(
+        'delete_application_by_id',
+        ObjectSchema(true)
+            .withRequiredProperty('application_id', TypeCode.String),
         (String correlationId, Parameters args) {
       var applicationId = args.getAsString('application_id');
       return _controller.deleteApplicationById(correlationId, applicationId);

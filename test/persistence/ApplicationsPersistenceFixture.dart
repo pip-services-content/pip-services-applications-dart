@@ -1,7 +1,7 @@
 import 'package:test/test.dart';
 import 'package:pip_services3_commons/pip_services3_commons.dart';
 
-import 'package:pip_services_applications_dart/pip_services_applications_dart.dart';
+import 'package:pip_services_applications/pip_services_applications.dart';
 
 final APPLICATION1 = ApplicationV1(
     id: '1',
@@ -9,24 +9,21 @@ final APPLICATION1 = ApplicationV1(
     product: 'Product 1',
     copyrights: 'PipDevs 2018',
     min_ver: 0,
-    max_ver: 9999
-);
+    max_ver: 9999);
 final APPLICATION2 = ApplicationV1(
     id: '2',
     name: MultiString({'en': 'App1'}),
     product: 'Product 1',
     copyrights: 'PipDevs 2018',
     min_ver: 0,
-    max_ver: 9999
-);
+    max_ver: 9999);
 final APPLICATION3 = ApplicationV1(
     id: '3',
     name: MultiString({'en': 'App1'}),
     product: 'Product 2',
     copyrights: 'PipDevs 2008',
     min_ver: 0,
-    max_ver: 9999
-);
+    max_ver: 9999);
 
 class ApplicationsPersistenceFixture {
   IApplicationsPersistence _persistence;
@@ -60,7 +57,7 @@ class ApplicationsPersistenceFixture {
     expect(APPLICATION3.copyrights, application.copyrights);
   }
 
-void testCrudOperations() async {
+  void testCrudOperations() async {
     ApplicationV1 application1;
 
     // Create items
@@ -105,6 +102,5 @@ void testCrudOperations() async {
     page = await _persistence.getPageByFilter(
         null, FilterParams.fromValue({'search': '1'}), PagingParams());
     expect(page.data.length, 2);
-  }    
-
+  }
 }

@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'package:mongo_dart_query/mongo_dart_query.dart' as mngquery;
 import 'package:pip_services3_commons/pip_services3_commons.dart';
 import 'package:pip_services3_mongodb/pip_services3_mongodb.dart';
 
@@ -22,11 +21,17 @@ class ApplicationsMongoDbPersistence
     if (search != null) {
       var searchRegex = RegExp(search, caseSensitive: false);
       var searchCriteria = [];
-      searchCriteria.add({ 'id': { r'$regex': searchRegex.pattern } });
-      searchCriteria.add({ 'product': { r'$regex': searchRegex.pattern } });
-      searchCriteria.add({ 'copyrights': { r'$regex': searchRegex.pattern } });
-      criteria.add({ r'$or': searchCriteria });
-    }    
+      searchCriteria.add({
+        'id': {r'$regex': searchRegex.pattern}
+      });
+      searchCriteria.add({
+        'product': {r'$regex': searchRegex.pattern}
+      });
+      searchCriteria.add({
+        'copyrights': {r'$regex': searchRegex.pattern}
+      });
+      criteria.add({r'$or': searchCriteria});
+    }
 
     var id = filter.getAsNullableString('id');
     if (id != null) {

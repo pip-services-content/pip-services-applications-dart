@@ -3,7 +3,7 @@ import 'package:pip_services3_commons/pip_services3_commons.dart';
 
 class ApplicationsHttpServiceV1 extends CommandableHttpService {
   ApplicationsHttpServiceV1() : super('v1/applications') {
-    dependencyResolver.put(
-        'controller', Descriptor('pip-services-applications', 'controller', '*', '*', '1.0'));
+    dependencyResolver.put('controller',
+        Descriptor('pip-services-applications', 'controller', '*', '*', '1.0'));
   }
 }
