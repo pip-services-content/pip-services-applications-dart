@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
-  <meta name="description" content="API docs for the deleteByFilter method from the ApplicationsMemoryPersistence class, for the Dart programming language.">
-  <title>deleteByFilter method - ApplicationsMemoryPersistence class - pip_services_applications library - Dart API</title>
+  <meta name="description" content="API docs for the getCountByFilterEx method from the ApplicationsMemoryPersistence class, for the Dart programming language.">
+  <title>getCountByFilterEx method - ApplicationsMemoryPersistence class - pip_services_applications library - Dart API</title>
 
   
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500,400i,400,300|Source+Sans+Pro:400,300,700" rel="stylesheet">
@@ -27,9 +27,9 @@
     <li><a href="../../index.html">pip_services_applications</a></li>
     <li><a href="../../pip_services_applications/pip_services_applications-library.html">pip_services_applications</a></li>
     <li><a href="../../pip_services_applications/ApplicationsMemoryPersistence-class.html">ApplicationsMemoryPersistence</a></li>
-    <li class="self-crumb">deleteByFilter method</li>
+    <li class="self-crumb">getCountByFilterEx method</li>
   </ol>
-  <div class="self-name">deleteByFilter</div>
+  <div class="self-name">getCountByFilterEx</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
@@ -48,7 +48,7 @@
       <li><a href="../../index.html">pip_services_applications</a></li>
       <li><a href="../../pip_services_applications/pip_services_applications-library.html">pip_services_applications</a></li>
       <li><a href="../../pip_services_applications/ApplicationsMemoryPersistence-class.html">ApplicationsMemoryPersistence</a></li>
-      <li class="self-crumb">deleteByFilter method</li>
+      <li class="self-crumb">getCountByFilterEx method</li>
     </ol>
     
     <h5>ApplicationsMemoryPersistence class</h5>
@@ -108,25 +108,25 @@
   </div><!--/.sidebar-offcanvas-->
 
   <div id="dartdoc-main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
-      <div><h1><span class="kind-method">deleteByFilter</span> method</h1></div>
+      <div><h1><span class="kind-method">getCountByFilterEx</span> method</h1></div>
 
     <section class="multi-line-signature">
-      <span class="returntype">Future</span>
-            <span class="name ">deleteByFilter</span>
-(<wbr><ol class="parameter-list"><li><span class="parameter" id="deleteByFilter-param-correlationId"><span class="type-annotation">String</span> <span class="parameter-name">correlationId</span>, </span></li>
-<li><span class="parameter" id="deleteByFilter-param-filter"><span class="type-annotation">dynamic</span> <span class="parameter-name">filter</span></span></li>
+      <span class="returntype">Future<span class="signature">&lt;<wbr><span class="type-parameter">int</span>&gt;</span></span>
+            <span class="name ">getCountByFilterEx</span>
+(<wbr><ol class="parameter-list"><li><span class="parameter" id="getCountByFilterEx-param-correlationId"><span class="type-annotation">String</span> <span class="parameter-name">correlationId</span>, </span></li>
+<li><span class="parameter" id="getCountByFilterEx-param-filter"><span class="type-annotation">dynamic</span> <span class="parameter-name">filter</span></span></li>
 </ol>)
       <div class="features">inherited</div>
     </section>
     <section class="desc markdown">
-      <p>Deletes data items that match to a given filter.</p>
-<p>This method shall be called by a public deleteByFilter method from child class that
+      <p>Gets a count of data items retrieved by a given filter.</p>
+<p>This method shall be called by a public getCountByFilter method from child class that
 receives FilterParams and converts them into a filter function.</p>
 <ul>
-<li><code>correlationId</code>     (optional) transaction id to trace execution through call chain.</li>
-<li><code>filter</code>            (optional) a filter function to filter items.
-Return                Future that receives null for success.
-Throws error</li>
+<li><code>correlationId</code>    (optional) transaction id to trace execution through call chain.</li>
+<li><code>filter</code>           (optional) a filter function to filter items
+Return                Future that receives a data count
+Throw  error.</li>
 </ul>
     </section>
     
