@@ -1,6 +1,5 @@
 name: pip_services_applications
-version: "1.0.0"
-author: Sergey Seroukhov <seroukhov@gmail.com>
+version: "1.0.1"
 description: Applications microservice for Pip.Services in Dart. It keeps a list of supported applications that are referenced from other content microservices.
 homepage: https://github.com/pip-services-content/pip-services-applications-dart
 
